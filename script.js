@@ -3,6 +3,7 @@ var buttonGreen = document.querySelector(".greenbutton");
 var buttonYellow = document.querySelector(".yellowbutton");
 var buttonPurple = document.querySelector(".purplebutton");
 var jumbotron = document.querySelector("#jumbotron");
+var popup = document.querySelector(".popup");
 var backgroundHasColor = false;
 
 buttonBlue.addEventListener("click", function() {
@@ -28,14 +29,7 @@ buttonGreen.addEventListener("click", function() {
 });
 
 buttonYellow.addEventListener("click", function() {
-    if (backgroundHasColor) {
-        jumbotron.style.background = "#e9ecef";
-        backgroundHasColor = false;
-    } else {
-        jumbotron.style.background = "#DDE053";
-        backgroundHasColor = true;
-    }
-    
+    popup.classList.add("open");    
 });
 
 buttonPurple.addEventListener("click", function() {
